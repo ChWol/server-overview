@@ -4,3 +4,4 @@ history.jsonl
 uptime.sqlite
 uptime.sqlite-*
 .DS_Store
+macos/ServerOverviewBar/build/

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Server Overview</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="shell">
@@ -24,28 +24,13 @@
       <section class="summary" aria-live="polite">
         <div class="summary-status">
           <span class="status-light unknown" id="summaryLight"></span>
-          <span id="summaryText">No servers added yet</span>
+          <span id="summaryText">Loading servers...</span>
         </div>
         <time id="checkedAt">Not checked yet</time>
       </section>
 
-      <form class="add-server" id="addServerForm" autocomplete="off">
-        <label for="shortName">Add server</label>
-        <div class="add-server-row">
-          <input id="shortName" name="shortName" type="text" inputmode="url" placeholder="short name" pattern="[A-Za-z0-9-]+" aria-describedby="domainSuffix" required>
-          <span id="domainSuffix">.eda.cit.tum.de</span>
-          <button class="add-button" type="submit" aria-label="Add server" title="Add server">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 5v14"></path>
-              <path d="M5 12h14"></path>
-            </svg>
-          </button>
-        </div>
-        <p class="form-message" id="formMessage" aria-live="polite"></p>
-      </form>
-
       <section class="server-grid" id="serverGrid" aria-label="Servers"></section>
-      <p class="empty-state" id="emptyState">Add a short name above to start monitoring a server.</p>
+      <p class="empty-state" id="emptyState">No servers configured.</p>
     </main>
 
     <template id="serverTemplate">
@@ -54,7 +39,7 @@
           <span class="status-light unknown"></span>
           <div>
             <h2></h2>
-            <input class="server-description" type="text" maxlength="80" aria-label="Server info">
+            <p class="server-description"></p>
           </div>
         </div>
         <dl class="server-details">
@@ -78,6 +63,7 @@
       </article>
     </template>
 
-    <script src="/app.js"></script>
+    <script src="servers.config.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

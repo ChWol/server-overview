@@ -5,7 +5,7 @@
   --muted: #65716d;
   --line: #d9ded6;
   --panel: #ffffff;
-  --up: #16835b;
+  --up: #188a5d;
   --up-bg: #dff3e7;
   --down: #b23842;
   --down-bg: #f8dfe2;
@@ -100,8 +100,7 @@ h1 {
 }
 
 .summary,
-.server-card,
-.add-server {
+.server-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.86);
@@ -132,87 +131,6 @@ time {
   color: var(--muted);
   font-size: 0.9rem;
   white-space: nowrap;
-}
-
-.add-server {
-  margin-bottom: 14px;
-  padding: 16px;
-}
-
-.add-server label {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.add-server-row {
-  display: grid;
-  grid-template-columns: minmax(120px, 1fr) auto 42px;
-  align-items: center;
-  gap: 8px;
-}
-
-.add-server input {
-  width: 100%;
-  min-width: 0;
-  height: 42px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0 12px;
-  color: var(--ink);
-  background: #fff;
-  font: inherit;
-  font-weight: 700;
-}
-
-.add-server input:focus {
-  outline: 2px solid rgba(41, 93, 111, 0.22);
-  border-color: rgba(41, 93, 111, 0.5);
-}
-
-#domainSuffix {
-  color: var(--muted);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.add-button {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 1px solid rgba(22, 131, 91, 0.28);
-  border-radius: 8px;
-  color: #fff;
-  background: var(--up);
-  cursor: pointer;
-}
-
-.add-button svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.2;
-}
-
-.add-server.is-busy .add-button {
-  cursor: wait;
-  opacity: 0.76;
-}
-
-.form-message {
-  min-height: 18px;
-  margin-top: 9px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 650;
 }
 
 .server-grid {
@@ -271,27 +189,8 @@ time {
 }
 
 .server-description {
-  display: block;
-  width: 100%;
-  max-width: 320px;
   margin-top: 5px;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  padding: 2px 4px;
   color: var(--muted);
-  background: transparent;
-  font: inherit;
-}
-
-.server-description:hover,
-.server-description:focus {
-  border-color: var(--line);
-  background: rgba(255, 255, 255, 0.72);
-  outline: none;
-}
-
-.server-description:disabled {
-  opacity: 0.7;
 }
 
 .server-details {
@@ -357,16 +256,6 @@ dd {
 
   time {
     white-space: normal;
-  }
-
-  .add-server-row {
-    grid-template-columns: minmax(0, 1fr) 42px;
-  }
-
-  #domainSuffix {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    padding-left: 2px;
   }
 
   .server-details {
