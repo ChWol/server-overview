@@ -1,0 +1,12 @@
+{
+  "name": "server-overview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Concise server status overview dashboard.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

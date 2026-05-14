@@ -1,0 +1,6 @@
+node_modules/
+*.log
+history.jsonl
+uptime.sqlite
+uptime.sqlite-*
+.DS_Store
